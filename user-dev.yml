@@ -1,0 +1,24 @@
+server:
+  port: ${port}
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springcloud?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    password: root
+    username: root
+  application:
+    name: provide
+
+# 配置eureka server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+    #向Eureka服务中心注册服务
+  instance:
+    # 租约到期，服务时效时间，默认值90秒
+    lease-expiration-duration-in-seconds: 90
+    # 租约续约间隔时间，默认30秒
+    lease-renewal-interval-in-seconds: 30
+    # 超过180秒没有续约的服务将被剔除
+    eviction-interval-timer-in-ms: 180
