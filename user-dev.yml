@@ -7,7 +7,7 @@ spring:
     password: root
     username: root
   application:
-    name: provide-user
+    name: provide_user
 
 # 配置eureka server
 eureka:
